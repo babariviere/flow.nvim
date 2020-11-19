@@ -1,0 +1,29 @@
+= flow neovim plugin
+
+== Installation
+
+With vim-plug:
+
+[source,vim]
+====
+Plug 'babariviere/flow.nvim'
+====
+
+== Usage
+
+This plugin provides default keybindings and it can be used like this:
+
+[source,lua]
+====
+require('flow').use_default_mappings()
+====
+
+These functions are available in `flow`:
+
+[source,vim]
+====
+" Change directory to new project
+nnoremap <leader>pp :lua require('flow').switch_project()
+" Clone github project / go to project with full path
+nnoremap <leader>pc :lua require('flow').clone_project()
+====
